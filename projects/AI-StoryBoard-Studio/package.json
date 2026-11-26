@@ -1,0 +1,34 @@
+{
+  "name": "ai-storyboard-studio",
+  "version": "1.0.0",
+  "description": "AI-StoryBoard-Studio - 剧创智能分镜工场 (React + TailwindCSS + TypeScript)",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "test": "tsx --test tests/docParser.test.ts tests/exportFormatter.test.ts tests/llmService.test.ts tests/promptAdapter.test.ts tests/srtGenerator.test.ts tests/webUi.test.ts tests/workflowEngine.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai",
+    "storyboard",
+    "short-drama",
+    "midjourney",
+    "flux",
+    "srt",
+    "typescript",
+    "react",
+    "tailwindcss"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.3.4",
+    "antd": "^6.6.8",
+    "dayjs": "^1.11.23"
+  }
+}

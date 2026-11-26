@@ -1,0 +1,22 @@
+{
+  "name": "lex-rag",
+  "version": "1.0.0",
+  "description": "LexRAG - 法律法规条文级溯源与智能咨询系统 (TypeScript + React 18 + SQLite FTS5)",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.ts",
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "../AI-StoryBoard-Studio/node_modules/.bin/tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "rag",
+    "legal",
+    "law",
+    "sqlite",
+    "fts5",
+    "typescript",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,28 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node
+node_modules/
+
+# Test artifacts
+data_test/
+data_web_test/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documents & Binaries
+*.pdf
+
+# Private interview prep & personal resumes (never publish)
+interview-records/
+resumes/
+
+# Environment secrets
+.env
+.env.*
+!.env.example

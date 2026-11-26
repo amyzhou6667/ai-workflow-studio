@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ToneRelay - 智能影调迁移伴侣 (React)</title>
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- 本地优先的 React 18 / ReactDOM 运行时 (离线与内网免外部网络依赖) -->
+  <script src="./vendor/react.production.min.js"></script>
+  <script src="./vendor/react-dom.production.min.js"></script>
+
+  <!-- CDN 双重降级容灾兜底 -->
+  <script>
+    window.addEventListener('error', function(e) {
+      console.error('页面脚本错误:', e);
+      var tip = document.getElementById('loadingText');
+      if (tip) {
+        tip.innerHTML = '<span style="color:#ef4444;font-size:12px;">⚠️ 模块加载失败: ' + (e.message || '未知错误') + ' (请按 F12 查看 Console)</span>';
+      }
+    });
+
+    if (!window.React) {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"><\/script>');
+    }
+    if (!window.ReactDOM) {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"><\/script>');
+    }
+  </script>
+</head>
+<body>
+  <div id="root">
+    <!-- 首屏 Loading 占位，React 加载后自动无缝替换 -->
+    <div class="app-container">
+      <header class="app-header">
+        <div class="logo-title">
+          <span class="logo-icon">🎨</span>
+          <h1>ToneRelay</h1>
+        </div>
+        <p class="subtitle" id="loadingText">正在载入智能影调迁移伴侣 (React)...</p>
+      </header>
+    </div>
+  </div>
+
+  <!-- 纯前端色彩与影调迁移核心算法引擎 (TypeScript) -->
+  <script src="./engine.ts"></script>
+  <!-- React TypeScript 组件驱动主程序 -->
+  <script src="./App.tsx"></script>
+</body>
+</html>
